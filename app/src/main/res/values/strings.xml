@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Food Now!</string>
+    <string name="api_key">oSldbNmG36meLbE645co-NNejWIAEuvVTexQKRgurlmHQNUYk1efTV9oPtqqIhvP73jYz_RZNdfyPmN5u14kXOPwoqm-ccgSCIJMDZq3aMaL807PDztU2BVCKrU0XXYx</string>
+
+<!--  Stuff in MainActivity  -->
+    <string name="submit_button_text_1">Get food now!</string>
+    <string name="submit_button_text_2">#EndIndecisiveness</string>
+    <string name="category_text">Terms, separated by commas</string>
+    <string name="location_text">Location (city or coordinates)</string>
+    <string name="location_button_text">Use my location</string>
+    <string name="price_range_text">Price range (optional)</string>
+    <string name="price_1">$</string>
+    <string name="price_2">$$</string>
+    <string name="price_3">$$$</string>
+    <string name="price_4">$$$$</string>
+    <string name="distance_text">Distance (1 mi ≈ 1.609 km)</string>
+    <string name="default_distance">5.0</string>
+    <string name="miles_text">mi</string>
+    <string name="rating_text">Minimum rating (optional)</string>
+
+    <string name="location_toast_wait">Could not grab location, wait a few seconds for the location service to get location or manually input.</string>
+    <string name="location_alert_message">GPS not enabled for coordinate input. Either enable GPS, or input location manually.</string>
+    <string name="location_alert_positive">Enable location</string>
+    <string name="location_alert_negative">Cancel</string>
+
+<!--  Optional Attributes -->
+    <string name="attributes_text">Attributes (optional, all conditions must be met)</string>
+    <string name="attribute">Attibute</string>
+    <string name="open_now_text">Open now</string>
+    <string name="hot_and_new">Hot and new</string>
+    <string name="request_a_quote">Request a quote</string>
+    <string name="reservation">Reservation</string>
+    <string name="waitlist_reservation">Waitlist reservation</string>
+    <string name="cashback">Cashback</string>
+    <string name="deals">Deals</string>
+    <string name="gender_neutral_restrooms">Gender neutral restrooms</string>
+    <string name="open_to_all">Open To All</string>
+    <string name="wheelchair_accessible">Wheelchair accessible</string>
+
+<!--  Stuff in ResultActivity  -->
+    <string name="result_text">Your randomly selected business</string>
+    <string name="no_image">This business has no image</string>
+    <string name="business_name">Business name</string>
+    <string name="num_reviews">0</string>
+    <string name="review_singular">review</string>
+    <string name="review_plural">reviews</string>
+    <string name="business_title">Business title</string>
+    <string name="interpunct">·</string>
+    <string name="business_address">Business address</string>
+    <string name="business_open">Business open</string>
+    <string name="business_phone">(XXX) XXX-XXXX</string>
+    <string name="business_url">Open in Yelp</string>
+    <string name="business_price">Business price</string>
+    <string name="reroll">Re-roll with same parameters</string>
+    <string name="back">Change query</string>
+</resources>

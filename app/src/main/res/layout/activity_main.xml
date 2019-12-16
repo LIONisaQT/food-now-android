@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/category_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/location_text" />
+
+            <ImageButton
+                android:id="@+id/location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_weight="0"
+                android:onClick="onLocationClicked"
+                android:src="@drawable/ic_my_location_black_24dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/location_button_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/price_range_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/price_1"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPriceToggled"
+                android:text="@string/price_1" />
+
+            <CheckBox
+                android:id="@+id/price_2"
+                android:tag="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPriceToggled"
+                android:text="@string/price_2" />
+
+            <CheckBox
+                android:id="@+id/price_3"
+                android:tag="3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPriceToggled"
+                android:text="@string/price_3" />
+
+            <CheckBox
+                android:id="@+id/price_4"
+                android:tag="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onPriceToggled"
+                android:text="@string/price_4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/distance_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/distance_slider"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="20"
+                android:layout_weight="10"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/distance_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:text="@string/default_distance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="2dp"
+                android:paddingEnd="0dp"
+                android:gravity="end"
+                android:text="@string/miles_text" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/rating_text" />
+
+        <RatingBar
+            android:id="@+id/min_rating"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="@string/attributes_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <Switch
+                android:id="@+id/open_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/open_now_text" />
+
+            <Switch
+                android:id="@+id/hot_and_new"
+                android:tag="hot_and_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_and_new" />
+
+            <Switch
+                android:id="@+id/request_a_quote"
+                android:tag="request_a_quote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/request_a_quote" />
+
+            <Switch
+                android:id="@+id/reservation"
+                android:tag="reservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reservation" />
+
+            <Switch
+                android:id="@+id/waitlist_reservation"
+                android:tag="waitlist_reservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waitlist_reservation" />
+
+            <Switch
+                android:id="@+id/cashback"
+                android:tag="cashback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cashback" />
+
+            <Switch
+                android:id="@+id/deals"
+                android:tag="deals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deals" />
+
+            <Switch
+                android:id="@+id/gender_neutral_restrooms"
+                android:tag="gender_neutral_restrooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_neutral_restrooms" />
+
+            <Switch
+                android:id="@+id/open_to_all"
+                android:tag="open_to_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/open_to_all" />
+
+            <Switch
+                android:id="@+id/wheelchair_accessible"
+                android:tag="wheelchair_accessible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wheelchair_accessible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="submit"
+            android:text="@string/submit_button_text_1" />
+    </LinearLayout>
+</ScrollView>
